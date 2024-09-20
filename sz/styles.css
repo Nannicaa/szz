@@ -1,0 +1,73 @@
+/* Centralizar a página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff; /* Fundo branco */
+  }
+  
+  /* Contêiner para as imagens */
+  .container {
+    position: relative;
+    text-align: center; /* Centraliza o texto na sobreposição */
+  }
+  
+  /* Imagem principal (envelope) */
+  #mainImage {
+    width: 300px; /* Tamanho fixo do envelope */
+    cursor: pointer;
+  }
+  
+  /* Sobreposição para o texto e a seta */
+  .overlay {
+    position: absolute;
+    top: 10%; /* Ajuste a posição para mais alto */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    text-align: center;
+    color: #8b4513; /* Cor do texto */
+    z-index: 3; /* Deve estar acima da imagem */
+  }
+  
+  /* Texto sobre a imagem */
+  .text {
+    font-size: 24px;
+    margin-bottom: 5px; /* Ajuste o espaçamento entre o texto e a seta */
+  }
+  
+  /* Seta animada */
+  .arrow {
+    font-size: 30px;
+    animation: bounce 1s infinite; /* Animação de pular */
+  }
+  
+  /* Animação de pular da seta */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Imagem da carta */
+  #letterImage {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição */
+    width: auto; /* Ajusta conforme necessário */
+    max-width: 400px; /* Tamanho máximo */
+    height: auto;
+  }
+  
+  /* Ocultar a imagem da carta inicialmente */
+  .hidden {
+    display: none;
+  }
